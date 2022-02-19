@@ -32,7 +32,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+//import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Juergen Hoeller
@@ -153,17 +153,17 @@ class OwnerController {
 		}
 	}
 
-	/**
-	 * Custom handler for displaying an owner.
-	 * @param ownerId the ID of the owner to display
-	 * @return a ModelMap with the model attributes for the view
-	 */
-	@GetMapping("/owners/{ownerId}")
-	public ModelAndView showOwner(@PathVariable("ownerId") int ownerId) {
-		ModelAndView mav = new ModelAndView("owners/ownerDetails");
-		Owner owner = this.owners.findById(ownerId);
-		mav.addObject(owner);
-		return mav;
-	}
+//	/**
+//	 * Custom handler for displaying an owner.
+//	 * @param ownerId the ID of the owner to display
+//	 * @return a ModelMap with the model attributes for the view
+//	 */
+//	@GetMapping("/owners/{ownerId}")
+//	public ModelAndView showOwner(@PathVariable("ownerId") int ownerId) {
+//		ModelAndView mav = new ModelAndView("owners/ownerDetails");
+//		Owner owner = this.owners.findById(ownerId);
+//		mav.addObject(owner);
+//		return mav;
+//	}
 
 }
